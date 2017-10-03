@@ -1,0 +1,273 @@
+/*--------------------------------------------------------------
+# Page Layouts & inner wrappers
+--------------------------------------------------------------*/
+
+.container {
+	margin: 6% auto;
+	max-width: 1100px;
+
+  .site-branding {
+    flex: 1 1 30%;
+  }
+  .main-navigation {
+    flex: 1 2 50%;
+  }
+}
+
+.full {
+	margin: 0 auto;
+	width: 100%;
+}
+
+.inner-wide {
+	min-width: 840px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.inner {
+	min-width: 750px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.row {
+	box-sizing: border-box;
+	display: flex;
+  flex-wrap: wrap;
+}
+
+.columns {
+	justify-content: center;
+
+	@include break-400 {
+		justify-content: space-between;
+
+	}
+}
+
+.col,
+.col_1
+.col_15,
+.col_2,
+.col_25,
+.col_3,
+.col_33,
+.col_4,
+.col_45,
+.col_5,
+.col_66,
+.col_75,
+.col_85,
+.col_9,
+ {
+	box-sizing: border-box;
+	flex: 0 0 auto;
+	padding-right: 0.5rem;
+	padding-left: 0.5rem;
+}
+
+
+.col {
+	flex-basis: 100%;
+	max-width: 100%;
+	padding: 10px;
+}
+
+.col_1 {
+	flex-basis: 100%;
+	max-width: 100%;
+
+	@include break-700 {
+		flex-basis: 10%;
+		// padding: 5px;
+	}
+}
+
+.col_15 {
+	flex-basis: 25%;
+	max-width: 25%;
+
+	@include break-700 {
+		flex-basis: 15%;
+		// padding: 5px;
+	}
+}
+
+.col_2 {
+	flex-basis: 50%;
+	max-width: 50%;
+
+	@include break-700 {
+		flex-basis: 20%;
+		max-width: 20%;
+		padding: 10px;
+	}
+}
+
+
+.col_25 {
+	flex-basis: 50%;
+	max-width: 50%;
+
+	@include break-700 {
+		flex-basis: 25%;
+		max-width: 25%;
+		padding: 10px;
+	}
+}
+
+.col_3 {
+	flex-basis: 100%;
+	max-width: 100%;
+
+	@include break-700 {
+		flex-basis: 30%;
+		max-width: 30%;
+		padding: 10px;
+	}
+}
+
+
+.col_33 {
+	flex-basis: 100%;
+	max-width: 100%;
+
+	@include break-700 {
+		flex-basis: 33%;
+		max-width: 33%;
+		padding: 10px;
+	}
+}
+
+// use this for 2 columns of text
+
+.col_4 {
+	flex-basis: 100%;
+	max-width: 100%;
+
+	@include break-700 {
+		flex-basis: 40%;
+		max-width: 40%;
+		padding: 10px;
+	}
+}
+
+.col_45 {
+	flex-basis: 100%;
+	max-width: 100%;
+
+	@include break-700 {
+		flex-basis: 45%;
+		max-width: 45%;
+		padding: 10px;
+	}
+}
+
+.col_5 {
+	flex-basis: 100%;
+	max-width: 100%;
+
+	@include break-700 {
+		flex-basis: 50%;
+		max-width: 50%;
+		padding: 10px;
+	}
+}
+
+.col_66 {
+	flex-basis: 100%;
+	max-width: 100%;
+
+	@include break-700 {
+		flex-basis: 60%;
+		max-width: 60%;
+		padding: 10px;
+	}
+}
+
+.col_70 {
+	flex-basis: 50%;
+	max-width: 50%;
+
+	@include break-700 {
+		flex-basis: 70%;
+		max-width: 70%;
+		padding: 10px;
+	}
+}
+
+.col_75 {
+	flex-basis: 50%;
+	max-width: 50%;
+
+	@include break-700 {
+		flex-basis: 75%;
+		max-width: 75%;
+		padding: 10px;
+	}
+}
+
+.col_85 {
+	flex-basis: 100%;
+	max-width: 100%;
+
+	@include break-700 {
+		flex-basis: 85%;
+		max-width: 85%;
+		padding: 10px;
+	}
+}
+
+.col_9 {
+	flex-basis: 100%;
+	max-width: 100%;
+
+	@include break-700 {
+		flex-basis: 90%;
+		max-width: 90%;
+		padding: 10px;
+	}
+}
+
+// Styling settings
+
+.pull-left {
+	order: 1;
+}
+
+.pull-right {
+	order: 2;
+}
+
+.flex-column {
+	flex-direction: column;
+}
+
+.just-center {
+	justify-content: center;
+}
+
+.just-around {
+	justify-content: space-around;
+}
+
+.centered {
+	text-align: center;
+}
+
+.pad_0 {
+	padding: 0;
+}
+
+.position_rel {
+	position: relative;
+}
+
+.vertical-center {
+	align-items: center;
+}
+
+.offset-right {
+	padding-left: 10em;
+}

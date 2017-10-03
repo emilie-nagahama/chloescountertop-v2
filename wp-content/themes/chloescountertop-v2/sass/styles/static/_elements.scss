@@ -1,0 +1,134 @@
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+
+html {
+	box-sizing: border-box;
+	@include font-size(1);
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+	color: $color__text-main;
+	font-family: $body, sans-serif;;
+	@include font-size(1);
+	line-height: $font__line-height-body;
+}
+
+/* Headings */
+
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	margin: 0;
+}
+
+body {
+	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+}
+
+blockquote, q {
+	quotes: "" "";
+
+	&:before,
+	&:after {
+		content: "";
+	}
+}
+
+hr {
+	background-color: $color__background-hr;
+	border: 0;
+	height: 1px;
+	margin-bottom: $base__space-unit;
+}
+
+pre {
+	background: $color__background-pre;
+	font-family: $font__pre;
+	@include font-size(0.9375);
+	line-height: $font__line-height-pre;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code, kbd, tt, var {
+	font-family: $font__code;
+	@include font-size(0.9375);
+}
+
+abbr, acronym {
+	border-bottom: 1px dotted $color__border-abbr;
+	cursor: help;
+}
+
+mark, ins {
+	background: $color__background-ins;
+	text-decoration: none;
+}
+
+ul, ol {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+ol {
+	list-style: none;
+}
+
+li > ul,
+li > ol {
+	margin: 0;
+	padding: 0;
+}
+
+// Wysiwyg content styles
+
+.hentry ul {
+	list-style: disc;
+}
+
+.hentry ol {
+	list-style: decimal;
+}
+
+.hentry ul, .hentry ol {
+	margin: 0 0 $base__space-unit ($base__space-unit * 2);
+}
+
+li > .hentry ul,
+li > .hentry ol {
+	margin-left: $base__space-unit;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 $base__space-unit $base__space-unit;
+}
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+table {
+	margin: 0 0 $base__space-unit;
+	width: 100%;
+}

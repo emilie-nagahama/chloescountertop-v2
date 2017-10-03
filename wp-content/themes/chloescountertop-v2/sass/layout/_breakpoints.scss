@@ -1,0 +1,57 @@
+/*--------------------------------------------------------------
+# Breakpoints
+# Using @include to pull these values directly into SASS
+--------------------------------------------------------------*/
+
+@mixin break-1024 {
+  @media only screen and (max-width: 1024px) {
+    @content;
+    body {
+      background: pink;
+    }
+  }
+}
+
+@mixin break-700 {
+  @media only screen and (max-width: 700px) {
+    @content;
+    body {
+      background: red;
+    }
+  }
+}
+
+@mixin break-400 {
+  @media only screen and (max-width: 400px) {
+    @content;
+    body {
+      background: green;
+    }
+  }
+}
+
+// @mixin respond-to($breakpoint) {
+//   @if $breakpoint == "400" {
+//     @media (max-width: 400px) {
+//       @content;
+//     }
+//   }
+//
+//   @else if $breakpoint == "700" {
+//     @media (max-width: 700px) {
+//       @content;
+//     }
+//   }
+//
+//   @else if $breakpoint == "1024" {
+//     @media (min-width: 1024px) {
+//       @content;
+//     }
+//   }
+//
+//   @else {
+//     @media ($breakpoint) {
+//       @content;
+//     }
+//   }
+// }
