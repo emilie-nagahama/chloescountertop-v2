@@ -2,7 +2,7 @@
 /**
  * The main template file.
  *
- * @package RED_Starter_Theme
+ * @package Chloes_Countertop_Theme_V2
  */
 
 get_header(); ?>

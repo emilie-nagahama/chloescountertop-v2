@@ -2,7 +2,7 @@
 /**
  * The template for displaying the footer.
  *
- * @package RED_Starter_Theme
+ * @package Chloes_Countertop_Theme_V2
  */
 
 ?>
@@ -11,7 +11,7 @@
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
 				<div class="site-info">
-				
+
 				</div><!-- .site-info -->
 			</footer><!-- #colophon -->
 		</div><!-- #page -->

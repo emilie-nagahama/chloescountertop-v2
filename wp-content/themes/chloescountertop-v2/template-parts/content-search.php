@@ -2,7 +2,7 @@
 /**
  * Template part for displaying results in search pages.
  *
- * @package RED_Starter_Theme
+ * @package Chloes_Countertop_Theme_V2
  */
 
 ?>

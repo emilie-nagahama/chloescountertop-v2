@@ -2,7 +2,7 @@
 /**
  * The header for our theme.
  *
- * @package RED_Starter_Theme
+ * @package Chloes_Countertop_Theme_V2
  */
 
 ?><!DOCTYPE html>

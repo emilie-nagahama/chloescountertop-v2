@@ -2,7 +2,7 @@
 /**
  * Template part for displaying page content in page.php.
  *
- * @package RED_Starter_Theme
+ * @package Chloes_Countertop_Theme_V2
  */
 
 ?>
