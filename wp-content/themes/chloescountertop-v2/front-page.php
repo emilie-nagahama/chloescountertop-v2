@@ -7,77 +7,70 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
 
-			<?php while ( have_posts() ) : the_post(); ?>
-
-        <div class="container row">
-          <div class="inner col">
-            <h2>
-              width: 100%
-            </h2>
-						<p>Art party gluten-free tilde wayfarers gastropub polaroid heirloom, 90's plaid synth YOLO blog neutra. Post-ironic swag deep v ugh vice. You probably haven't heard of them sriracha readymade lo-fi leggings paleo. Aesthetic pug fingerstache actually seitan. Marfa franzen tilde chicharrones listicle. Single-origin coffee viral bitters everyday carry kogi stumptown. Man braid williamsburg cornhole, iPhone celiac seitan tote bag tousled.</p>
-          </div>
-        </div>
-
-        <div class="container row">
-          <div class="inner col_5">
-            <h2>
-              width: 50%
-            </h2>
-						<p>Art party gluten-free tilde wayfarers gastropub polaroid heirloom, 90's plaid synth YOLO blog neutra. Post-ironic swag deep v ugh vice. You probably haven't heard of them sriracha readymade lo-fi leggings paleo. Aesthetic pug fingerstache actually seitan. Marfa franzen tilde chicharrones listicle. Single-origin coffee viral bitters everyday carry kogi stumptown. Man braid williamsburg cornhole, iPhone celiac seitan tote bag tousled.</p>
-          </div>
-          <div class="inner col_5">
-            <h2>
-              width: 50%
-            </h2>
-						<p>Art party gluten-free tilde wayfarers gastropub polaroid heirloom, 90's plaid synth YOLO blog neutra. Post-ironic swag deep v ugh vice. You probably haven't heard of them sriracha readymade lo-fi leggings paleo. Aesthetic pug fingerstache actually seitan. Marfa franzen tilde chicharrones listicle. Single-origin coffee viral bitters everyday carry kogi stumptown. Man braid williamsburg cornhole, iPhone celiac seitan tote bag tousled.</p>
-          </div>
-        </div>
+<div id="home-banner" class="banner">
+  <?php get_template_part( 'template-parts/pages/home/home-banner'); ?>
+</div>
 
 
-        <div class="container row">
-          <div class="inner col_75">
-						<h2>
-							width: 25%
-						</h2>
+<div class="container">
 
-						<p>Art party gluten-free tilde wayfarers gastropub polaroid heirloom, 90's plaid synth YOLO blog neutra. Post-ironic swag deep v ugh vice. You probably haven't heard of them sriracha readymade lo-fi leggings paleo. Aesthetic pug fingerstache actually seitan. Marfa franzen tilde chicharrones listicle. Single-origin coffee viral bitters everyday carry kogi stumptown. Man braid williamsburg cornhole, iPhone celiac seitan tote bag tousled.</p>
-          </div>
-          <div class="inner col_25 pull-right">
-            <h2>
-              width: 25%
-            </h2>
+  <div class="home-podcast-feed">
+    <div class="underline-thin blue">
+      <h3 class="secondary-section-title"><?php the_field('podcast_heading'); ?></h3>
+    </div>
 
-						<p>Art party gluten-free tilde wayfarers gastropub polaroid heirloom, 90's plaid synth YOLO blog neutra. Post-ironic swag deep v ugh vice. You probably haven't heard of them sriracha readymade lo-fi leggings paleo. Aesthetic pug fingerstache actually seitan. Marfa franzen tilde chicharrones listicle. Single-origin coffee viral bitters everyday carry kogi stumptown. Man braid williamsburg cornhole, iPhone celiac seitan tote bag tousled.</p>
-          </div>
-        </div>
+    <div class="post-recent-wrap">
+      <?php get_template_part( 'template-parts/pages/home/home-pod' ); ?>
+    </div><!-- end .home-recent-wrap -->
 
-        <div class="container row">
-          <div class="inner col_33">
-            <h2>
-              width: 33%
-            </h2>
-						<p>Art party gluten-free tilde wayfarers gastropub polaroid heirloom, 90's plaid synth YOLO blog neutra. Post-ironic swag deep v ugh vice. You probably haven't heard of them sriracha readymade lo-fi leggings paleo. Aesthetic pug fingerstache actually seitan. Marfa franzen tilde chicharrones listicle. Single-origin coffee viral bitters everyday carry kogi stumptown. Man braid williamsburg cornhole, iPhone celiac seitan tote bag tousled.</p>
-          </div>
-          <div class="inner col_33">
-            <h2>
-              width: 33%
-            </h2>
-						<p>Art party gluten-free tilde wayfarers gastropub polaroid heirloom, 90's plaid synth YOLO blog neutra. Post-ironic swag deep v ugh vice. You probably haven't heard of them sriracha readymade lo-fi leggings paleo. Aesthetic pug fingerstache actually seitan. Marfa franzen tilde chicharrones listicle. Single-origin coffee viral bitters everyday carry kogi stumptown. Man braid williamsburg cornhole, iPhone celiac seitan tote bag tousled.</p>
-          </div>
-          <div class="inner col_33">
-            <h2>
-              width: 33%
-            </h2>
-						<p>Art party gluten-free tilde wayfarers gastropub polaroid heirloom, 90's plaid synth YOLO blog neutra. Post-ironic swag deep v ugh vice. You probably haven't heard of them sriracha readymade lo-fi leggings paleo. Aesthetic pug fingerstache actually seitan. Marfa franzen tilde chicharrones listicle. Single-origin coffee viral bitters everyday carry kogi stumptown. Man braid williamsburg cornhole, iPhone celiac seitan tote bag tousled.</p>
-          </div>
-        </div>
 
-			<?php endwhile; // End of the loop. ?>
+    <a class="button-link" href="<?php get_template_directory_uri()?>/podcast">See All Podcast</a>
+  </div>
+</div>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+<div class="container home-embed-container">
+  <div class="home-offerings">
+    <h2 class="h2-tag blue"><span>Living in Light Retreat</span></h2>
+  </div>
+
+  <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://player.vimeo.com/video/209450928' frameborder='0' webkitAllowFullScreen mozallowfullscreen autoplay allowFullScreen></iframe></div>
+
+      <a class="button-link" href="<?php get_template_directory_uri()?>/retreats/">Retreat Details</a>
+</div>
+
+
+<!-- <div class="full-width home-optin"> -->
+  <?php //get_template_part( 'template-parts/pages/home/home-optin'); ?>
+<!-- </div> -->
+
+
+<div class="container">
+  <div class="home-blog-feed">
+    <div class="underline-thin blue">
+      <h3 class="secondary-section-title">Blog: Recent Posts</h3>
+    </div>
+
+    <div class="post-recent-wrap">
+      <?php get_template_part( 'template-parts/pages/home/home-recent' ); ?>
+    </div>
+
+
+    <a class="button-link" href="<?php get_template_directory_uri()?>/blog">See More Blog Posts</a>
+  </div>
+
+
+  <div class="home-offerings">
+    <h2 class="h2-tag blue"><span><?php the_field('offerings_heading'); ?></span></h2>
+    <?php get_template_part('template-parts/pages/home/offerings'); ?>
+  </div>
+
+</div> <!-- .container -->
+
+
+
+<div class="full-width home-optin">
+  <?php get_template_part( 'template-parts/pages/home/home-optin'); ?>
+</div>
 
 <?php get_footer(); ?>

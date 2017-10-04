@@ -2,27 +2,35 @@
 
 $base__space-unit: 1.5em;
 
-// Colors
+// Type Colors
+$color__paragraph: #333333;
+$color_heading: #3d7780;
 
-$color__background-body: #fff;
-$color__text-main: #404040;
+// Pink links in text
+$pink__link: #ee7c90;
+$pink__link-visited: #1d4765;
+$pink__link-hover: #1d4765;
 
-$color__background-screen: #f1f1f1;
-$color__text-screen: #21759b;
+// Blue Anchor Links
+$blue__link: #1d4765;
+$blue_link-visited: #ee7c90;
+$blue_link-hover: #ee7c90;
 
-$color__background-hr: #ccc;
-$color__background-pre: #eee;
-$color__background-ins: #fff9c0;
-$color__border-abbr: #666;
-
-$color__link: royalblue;
-$color__link-visited: purple;
-$color__link-hover: midnightblue;
+// Brand Colors
+$color_green: #3d7780;
+$color_blue: #1d4765;
+$color_yellow: #f9f6c6;
+$colour_yellow_light: #fefdf4;
+$color_pink: #ee7c90;
+$color_white: #ffffff;
 
 // Typography
-
-$font__main: sans-serif;
+$font__main: 'playfair_display', serif;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
+$font__sans-serif: 'futura_condensed_medium', sans-serif;
+
+//Style
+$drop_shadow: 1px 1px 5px $color_blue;

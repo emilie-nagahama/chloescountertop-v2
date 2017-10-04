@@ -49,6 +49,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 @import 'mixins/mixins';
 
+@import 'layout/breakpoints';
+@import 'layout/layout';
+
 @import 'styles/variables';
 @import 'styles/fonts';
 @import 'styles/typography';
@@ -57,9 +60,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import 'styles/static/modules';
 @import 'styles/static/normalize';
 
-@import 'layout/breakpoints';
-@import 'layout/layout';
-
 @import 'components/content';
 @import 'components/forms';
 @import 'components/media';
@@ -67,5 +67,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import 'components/navigation-mobile';
 @import 'components/navigation-desktop';
 @import 'components/widgets';
+@import 'components/footer';
+@import 'components/header';
 
 @import 'pages/page-templates';
+@import 'pages/page-home';
