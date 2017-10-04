@@ -1,7 +1,7 @@
 {
-  "name": "redstarter",
+  "name": "chloescountertop-v2",
   "version": "1.0.0",
-  "description": "Le Red Bread theme.",
+  "description": "Chloe's Countertop Theme V2",
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
@@ -25,12 +25,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/redacademy/redstarter.git"
+    "url": "git+https://github.com/emilie-nagahama/chloescountertop-v2"
   },
   "author": "mandiwise",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/redacademy/redstarter/issues"
+    "url": "https://github.com/emilie-nagahama/chloescountertop-v2/issues"
   },
-  "homepage": "https://github.com/redacademy/redstarter#readme"
+  "homepage": "https://github.com/emilie-nagahama/chloescountertop-v2#readme"
 }

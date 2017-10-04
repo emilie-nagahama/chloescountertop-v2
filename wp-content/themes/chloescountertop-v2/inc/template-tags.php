@@ -2,7 +2,7 @@
 /**
  * Custom template tags for this theme.
  *
- * @package RED_Starter_Theme
+ * @package Chloes_Countertop_Theme_V2
  */
 
  /**

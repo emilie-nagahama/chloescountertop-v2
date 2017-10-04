@@ -1,5 +1,3 @@
-# RED Starter
+# Chloe's Countertop
 
-A WordPress starter theme for RED Academy students, forked from Underscores.
-
-Download me, add me to your `wp-content` directory, rename me, and and start themin'!
+A WordPress theme custom built for Chloe Elgar, forked from Underscores.
