@@ -1,10 +1,10 @@
 <?php
 /**
- * Goatsocial Starter Theme functions and definitions.
+ * Chloe's Countertop Theme V2 functions and definitions.
  *
- * @link https://goatsocial.com
+ * @link https://chloescountertop.com
  *
- * @package Goatsocial_Starter_Theme
+ * @package Chloes_Countertop_Theme_V2
  */
 
 if ( ! function_exists( 'goatsocial_starter_setup' ) ) :
@@ -101,34 +101,22 @@ add_filter( 'stylesheet_uri', 'chloescountertop_minified_css', 10, 2 );
 /**
  * Enqueue scripts and styles.
  */
-function chlescountertop_scripts() {
-
-	// Load jQuery
-	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/build/js/jquery.min.js', array(), '1.4.1', true );
-
-	// Font-awesome
-	wp_enqueue_style ( 'font-awesome-cdn' , 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', array(), '4.4.0');
-
-	// Stylesheet
-	wp_enqueue_style( 'goatsocial-starter-style', get_stylesheet_uri() );
+function cct_starter_scripts() {
 	wp_enqueue_style( 'cct-starter-style', get_stylesheet_uri() );
 
-	// Link Focus
-	wp_enqueue_script( 'goatsocial-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
+	wp_enqueue_script( 'cct-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
 
-	// Load scripts
 	wp_enqueue_script("jquery");
 
-	wp_enqueue_script( 'scripts.min.js', get_template_directory_uri() . '/build/js/scripts.min.js', array( 'jquery' ), '1.9.1', true );
 	wp_enqueue_script( 'slick', get_template_directory_uri() . '/build/js/slick.min.js', array(), true );
-	wp_enqueue_script( 'slider', get_template_directory_uri() . '/build/js/slider.min.js', array(), true );
-	wp_enqueue_script( 'skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
+	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/build/js/scripts.min.js', array(), true );
+	wp_enqueue_script( 'sliders', get_template_directory_uri() . '/build/js/sliders.min.js', array(), true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'chlescountertop_scripts' );
+add_action( 'wp_enqueue_scripts', 'cct_starter_scripts' );
 
 /**
  * A Function specific to ACF for creating an Options Page
