@@ -13,26 +13,9 @@ html {
 	box-sizing: inherit;
 }
 
-body,
-button,
-input,
-select,
-textarea {
-	color: $color__text-main;
-	font-family: $body, sans-serif;;
-	@include font-size(1);
-	line-height: $font__line-height-body;
-}
-
-/* Headings */
-
-h1, h2, h3, h4, h5, h6 {
-	clear: both;
-	margin: 0;
-}
-
 body {
-	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+	background: #fff; /* Fallback for when there is no custom background color defined. */
+	text-transform: none;
 }
 
 blockquote, q {
@@ -45,73 +28,27 @@ blockquote, q {
 }
 
 hr {
-	background-color: $color__background-hr;
+	background-color: $color_blue;
 	border: 0;
 	height: 1px;
 	margin-bottom: $base__space-unit;
 }
 
-pre {
-	background: $color__background-pre;
-	font-family: $font__pre;
-	@include font-size(0.9375);
-	line-height: $font__line-height-pre;
-	margin-bottom: 1.6em;
-	max-width: 100%;
-	overflow: auto;
-	padding: 1.6em;
-}
-
-code, kbd, tt, var {
-	font-family: $font__code;
-	@include font-size(0.9375);
-}
-
-abbr, acronym {
-	border-bottom: 1px dotted $color__border-abbr;
-	cursor: help;
-}
-
-mark, ins {
-	background: $color__background-ins;
-	text-decoration: none;
-}
-
 ul, ol {
-	margin: 0;
-	padding: 0;
+	margin: 0 0 $base__space-unit ($base__space-unit * 2);
 }
 
 ul {
-	list-style: none;
+	list-style: disc;
 }
 
 ol {
-	list-style: none;
+	list-style: decimal;
 }
 
 li > ul,
 li > ol {
-	margin: 0;
-	padding: 0;
-}
-
-// Wysiwyg content styles
-
-.hentry ul {
-	list-style: disc;
-}
-
-.hentry ol {
-	list-style: decimal;
-}
-
-.hentry ul, .hentry ol {
-	margin: 0 0 $base__space-unit ($base__space-unit * 2);
-}
-
-li > .hentry ul,
-li > .hentry ol {
+	margin-bottom: 0;
 	margin-left: $base__space-unit;
 }
 
@@ -131,4 +68,174 @@ img {
 table {
 	margin: 0 0 $base__space-unit;
 	width: 100%;
+}
+
+a:focus, a:active {
+	outline: none !important;
+}
+
+/* Underline styles. border bottom on section titles */
+
+.underline-all {
+	width: 100%;
+	border-bottom: 3px solid $color_blue;
+
+		&.blue {
+			color: $color_blue;
+		}
+		&.green {
+			color: $color_green;
+		}
+}
+
+.underline-thin {
+	width: 100%;
+	border-bottom: 2px solid $color_blue;
+  margin-bottom: 1em;
+
+		&.green {
+			border-bottom: 2px solid $color_green;
+			margin-bottom: 1em;
+		}
+}
+
+// Read More Background + button
+
+.home-post .read-more-bg:not(a) {
+	background: url(../../assets/images/square.png) repeat-x;
+	background-size: 40%;
+	filter:alpha(opacity=50);
+	background-position: center center;
+	display: flex;
+	justify-content: center;
+	padding: 2em;
+  margin: 2em 0;
+  text-align: center;
+}
+
+.read-more {
+	background-color: #ee7c90;
+	font-size: 1.5em;
+	padding: .4em 1.3em;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+// Button - Read More home
+
+.more-link,
+.more-link:active,
+.more-link:visited  {
+	@include button;
+	color: #fff;
+
+}
+
+.read-more:hover {
+	@include hover-button;
+	color: $color_blue;
+}
+
+.read-more:visited {
+	color: $color_white;
+}
+
+// Button Link
+
+.button-link,
+.button-link:active,
+.button-link:visited  {
+	@include button;
+	color: #fff;
+}
+
+.button-link:hover {
+  opacity: 0.8;
+	@include hover-button;
+}
+
+// Home CTAs
+
+.cta-home {
+
+	a:hover {
+		opacity: 0.8;
+	}
+}
+
+// post-navigation
+
+.site-main .navigation.post-navigation {
+	margin-bottom: 4em;
+}
+
+.nav-links .nav-previous, .nav-links .nav-next {
+	a, a:active, a:focus {
+		color: $color_blue;
+	}
+
+	a:hover {
+		color: $color_blue;
+		opacity: 0.8;
+	}
+}
+
+.post-navigation {
+	border-top: 1.5px solid $color_blue;
+	border-bottom: 1.5px solid $color_blue;
+	padding: 0.5em 0;
+
+	.nav-previous::before {
+		color: $color_blue;
+		content: '\2770\ ';
+	}
+	.nav-previous:hover {
+		opacity: 0.8;
+	}
+	.nav-next::after {
+		color: $color_blue;
+		content: '\ \2771';
+	}
+	.nav-next:hover {
+		opacity: 0.8;
+	}
+}
+
+// Blog Optin
+
+.blog-optin {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 3em;
+	background: $color_blue;
+	padding: 1em;
+	color: #fff;
+	text-align: center;
+
+	.white {
+		color: #fff;
+	}
+
+	h3 {
+		margin-bottom: 1em;
+	}
+
+	img {
+		flex: 0 1 7%;
+	}
+	div {
+		flex: 0 2 90%;
+	}
+	p {
+		margin: 0;
+	}
+
+	button {
+		margin-top: 1.5em;
+	}
+}
+
+#mce-error-response {
+	color: $color_white;
 }

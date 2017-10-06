@@ -1,0 +1,217 @@
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+.site-footer {
+  background: $color_blue;
+  padding: 1em 4em;
+  width: 100%;
+}
+
+.site-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+
+  a {
+    color: $color_white;
+    font-family: $font__sans-serif;
+    @include font-size(0.85);
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  #info-copy {
+    flex: 1 0 100%;
+  }
+
+  @include tablet {
+    #info-terms {
+      order: 1;
+    }
+
+    #info-credits {
+      order: 3;
+    }
+
+    #info-copy {
+      order: 2;
+      flex: 1 0 25%;
+    }
+
+  }
+
+  @include desktop {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+}
+
+.widgets {
+  font-family: $font__sans-serif;
+  padding-top: 2.5em;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2em;
+
+  h3 {
+    border-style: solid;
+    border-image: url('../../assets/images/CCT-border.png') 0 0 100% 0;
+    border-image-width: 15%;
+    color: $color_blue;
+    font-family: $font__main;
+    @include font-size(1.25);
+    margin-bottom: 1em;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+
+  ul {
+    list-style: none;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: $color_blue;
+  }
+
+  @include tablet {
+    background: $color_blue;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+
+    div {
+      flex: 1 0 50%;
+    }
+
+    h3, a {
+      color: white;
+
+    }
+
+    h3 {
+      filter: brightness(10);
+
+    }
+  }
+
+  @include desktop {
+    div {
+      flex: 1 0 25%;
+    }
+  }
+}
+
+// Instagram
+
+.Grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  &-item {
+    width: 100%;
+    background: transparent;
+    // margin-top: 2%;
+
+    @media (min-width: 48rem) {
+      width: 49%;
+
+      &:nth-child(odd) {
+        background: transparent;
+        margin-right: 2%;
+      }
+    }
+
+    @media (min-width: 55rem) {
+      width: 33%;
+      max-height: 299px;
+
+      &:not(:nth-child(3n)), &:not(:nth-child(5n)) {
+        background: transparent;
+        margin: 1%;
+      }
+    }
+
+    @media (min-width: 62rem) {
+      width: 13.5%;
+      max-height: 180px;
+
+      &:not(:nth-child(5n)) {
+        background: transparent;
+        margin: 0;
+        margin-right: 1%;
+        margin-bottom: 2%;
+      }
+    }
+
+    &:before {
+      content: "";
+      float: left;
+      padding-top: 100%;
+    }
+  }
+}
+
+.ig-wrapper ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+
+    li {
+      flex: 0 0 50%;
+      padding: .2em .2em .2em 0;
+      // width: 289px;
+
+      @include tablet {
+        flex: 0 0 33%;
+        max-width: 30%;
+      }
+
+      @include desktop {
+        flex: 0 0 15%;
+        max-width: 20%;
+      }
+
+    a {
+      background-size: cover !important;
+      background-position: center center !important;
+      background-repeat: no-repeat !important;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  img {
+    display: block;
+    // width: 125px;
+
+    @include desktop {
+      width: 180px;
+    }
+  }
+
+  @include tablet {
+    li {
+      flex: 0 0 33%;
+    }
+  }
+
+  @include desktop {
+    li {
+      flex: 0 0 15%;
+    }
+  }
+}

@@ -7,77 +7,29 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
 
-			<?php while ( have_posts() ) : the_post(); ?>
+<div id="home-banner" class="banner">
+  <?php get_template_part( 'template-parts/pages/home/banner'); ?>
+</div>
 
-        <div class="container row">
-          <div class="inner col">
-            <h2>
-              width: 100%
-            </h2>
-						<p>Art party gluten-free tilde wayfarers gastropub polaroid heirloom, 90's plaid synth YOLO blog neutra. Post-ironic swag deep v ugh vice. You probably haven't heard of them sriracha readymade lo-fi leggings paleo. Aesthetic pug fingerstache actually seitan. Marfa franzen tilde chicharrones listicle. Single-origin coffee viral bitters everyday carry kogi stumptown. Man braid williamsburg cornhole, iPhone celiac seitan tote bag tousled.</p>
-          </div>
-        </div>
+<div class="container home-podcast-feed">
+	<?php get_template_part( 'template-parts/pages/home/podcast-loop' ); ?>
+</div>
 
-        <div class="container row">
-          <div class="inner col_5">
-            <h2>
-              width: 50%
-            </h2>
-						<p>Art party gluten-free tilde wayfarers gastropub polaroid heirloom, 90's plaid synth YOLO blog neutra. Post-ironic swag deep v ugh vice. You probably haven't heard of them sriracha readymade lo-fi leggings paleo. Aesthetic pug fingerstache actually seitan. Marfa franzen tilde chicharrones listicle. Single-origin coffee viral bitters everyday carry kogi stumptown. Man braid williamsburg cornhole, iPhone celiac seitan tote bag tousled.</p>
-          </div>
-          <div class="inner col_5">
-            <h2>
-              width: 50%
-            </h2>
-						<p>Art party gluten-free tilde wayfarers gastropub polaroid heirloom, 90's plaid synth YOLO blog neutra. Post-ironic swag deep v ugh vice. You probably haven't heard of them sriracha readymade lo-fi leggings paleo. Aesthetic pug fingerstache actually seitan. Marfa franzen tilde chicharrones listicle. Single-origin coffee viral bitters everyday carry kogi stumptown. Man braid williamsburg cornhole, iPhone celiac seitan tote bag tousled.</p>
-          </div>
-        </div>
+<div class="container home-embed-container">
+	<?php get_template_part( 'template-parts/pages/home/living-in-light' ); ?>
+</div>
 
+<div class="container home-blog-feed">
+	<?php get_template_part( 'template-parts/pages/home/blog-loop' ); ?>
+</div> <!-- .container -->
 
-        <div class="container row">
-          <div class="inner col_75">
-						<h2>
-							width: 25%
-						</h2>
+<div class="container home-offerings">
+	<?php get_template_part('template-parts/pages/home/offerings'); ?>
+</div>
 
-						<p>Art party gluten-free tilde wayfarers gastropub polaroid heirloom, 90's plaid synth YOLO blog neutra. Post-ironic swag deep v ugh vice. You probably haven't heard of them sriracha readymade lo-fi leggings paleo. Aesthetic pug fingerstache actually seitan. Marfa franzen tilde chicharrones listicle. Single-origin coffee viral bitters everyday carry kogi stumptown. Man braid williamsburg cornhole, iPhone celiac seitan tote bag tousled.</p>
-          </div>
-          <div class="inner col_25 pull-right">
-            <h2>
-              width: 25%
-            </h2>
-
-						<p>Art party gluten-free tilde wayfarers gastropub polaroid heirloom, 90's plaid synth YOLO blog neutra. Post-ironic swag deep v ugh vice. You probably haven't heard of them sriracha readymade lo-fi leggings paleo. Aesthetic pug fingerstache actually seitan. Marfa franzen tilde chicharrones listicle. Single-origin coffee viral bitters everyday carry kogi stumptown. Man braid williamsburg cornhole, iPhone celiac seitan tote bag tousled.</p>
-          </div>
-        </div>
-
-        <div class="container row">
-          <div class="inner col_33">
-            <h2>
-              width: 33%
-            </h2>
-						<p>Art party gluten-free tilde wayfarers gastropub polaroid heirloom, 90's plaid synth YOLO blog neutra. Post-ironic swag deep v ugh vice. You probably haven't heard of them sriracha readymade lo-fi leggings paleo. Aesthetic pug fingerstache actually seitan. Marfa franzen tilde chicharrones listicle. Single-origin coffee viral bitters everyday carry kogi stumptown. Man braid williamsburg cornhole, iPhone celiac seitan tote bag tousled.</p>
-          </div>
-          <div class="inner col_33">
-            <h2>
-              width: 33%
-            </h2>
-						<p>Art party gluten-free tilde wayfarers gastropub polaroid heirloom, 90's plaid synth YOLO blog neutra. Post-ironic swag deep v ugh vice. You probably haven't heard of them sriracha readymade lo-fi leggings paleo. Aesthetic pug fingerstache actually seitan. Marfa franzen tilde chicharrones listicle. Single-origin coffee viral bitters everyday carry kogi stumptown. Man braid williamsburg cornhole, iPhone celiac seitan tote bag tousled.</p>
-          </div>
-          <div class="inner col_33">
-            <h2>
-              width: 33%
-            </h2>
-						<p>Art party gluten-free tilde wayfarers gastropub polaroid heirloom, 90's plaid synth YOLO blog neutra. Post-ironic swag deep v ugh vice. You probably haven't heard of them sriracha readymade lo-fi leggings paleo. Aesthetic pug fingerstache actually seitan. Marfa franzen tilde chicharrones listicle. Single-origin coffee viral bitters everyday carry kogi stumptown. Man braid williamsburg cornhole, iPhone celiac seitan tote bag tousled.</p>
-          </div>
-        </div>
-
-			<?php endwhile; // End of the loop. ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+<div class="full-width home-optin">
+  <?php get_template_part( 'template-parts/pages/home/optin-bar'); ?>
+</div>
 
 <?php get_footer(); ?>

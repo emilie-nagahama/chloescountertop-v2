@@ -1,3 +1,48 @@
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+
+@font-face {
+    font-family: 'futura_condensed_medium';
+    src: url('../../assets/fonts/futura-condensed-medium-webfont.woff2') format('woff2'),
+         url('../../assets/fonts/futura-condensed-medium-webfont.woff') format('woff'),
+         url('../../assets/fonts/futura-condensed-medium.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'playfair_display';
+    src: url('../../assets/fonts/playfairdisplay-regular-webfont.woff2') format('woff2'),
+         url('../../assets/fonts/playfairdisplay-regular-webfont.woff') format('woff'),
+         url('../../assets/fonts/playfairdisplay-regular.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'playfair_display';
+    src: url('../../assets/fonts/playfairdisplay-italic-webfont.woff2') format('woff2'),
+         url('../../assets/fonts/playfairdisplay-italic-webfont.woff') format('woff'),
+         url('../../assets/fonts/playfairdisplay-italic.otf') format('otf');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'playfair_display';
+    src: url('../../assets/fonts/playfairdisplay-bold-webfont.woff2') format('woff2'),
+         url('../../assets/fonts/playfairdisplay-bold-webfont.woff') format('woff'),
+         url('../../assets/fonts/playfairdisplay-bold.ttf') format('ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'playfair_display';
+    src: url('../../assets/fonts/playfairdisplay-bolditalic-webfont.woff2') format('woff2'),
+         url('../../assets/fonts/playfairdisplay-bolditalic-webfont.woff') format('woff'),
+          url('../../assets/fonts/playfairdisplay-bolditalic.otf') format('otf');
+    font-weight: bold;
+    font-style: italic;
+}

@@ -1,10 +1,10 @@
 <?php
 /**
- * Goatsocial Starter Theme functions and definitions.
+ * Chloe's Countertop Theme V2 functions and definitions.
  *
- * @link https://goatsocial.com
+ * @link https://chloescountertop.com
  *
- * @package Goatsocial_Starter_Theme
+ * @package Chloes_Countertop_Theme_V2
  */
 
 if ( ! function_exists( 'goatsocial_starter_setup' ) ) :
@@ -39,7 +39,10 @@ function goatsocial_starter_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html( 'Primary Menu' ),
+		'desktop' => esc_html( 'Desktop Menu' ),
+		'mobile' => esc_html( 'Mobile Menu' ),
+		'work_footer' => esc_html( 'Work with Me Menu' ),
+		'checkout_footer' => esc_html( 'Checkout These Menu' ),
 	) );
 
 	// Switch search form, comment form, and comments to output valid HTML5.
@@ -86,50 +89,34 @@ add_action( 'widgets_init', 'goatsocial_starter_widgets_init' );
 /**
  * Filter the stylesheet_uri to output the minified CSS file.
  */
-function goatsocial_starter_minified_css( $stylesheet_uri, $stylesheet_dir_uri ) {
+function chloescountertop_minified_css( $stylesheet_uri, $stylesheet_dir_uri ) {
 	if ( file_exists( get_template_directory() . '/build/css/style.min.css' ) ) {
 		$stylesheet_uri = $stylesheet_dir_uri . '/build/css/style.min.css';
 	}
 
 	return $stylesheet_uri;
 }
-add_filter( 'stylesheet_uri', 'goatsocial_starter_minified_css', 10, 2 );
+add_filter( 'stylesheet_uri', 'chloescountertop_minified_css', 10, 2 );
 
 /**
  * Enqueue scripts and styles.
  */
-function goatsocial_starter_scripts() {
+function cct_starter_scripts() {
+	wp_enqueue_style( 'cct-starter-style', get_stylesheet_uri() );
 
-	//Don't use WordPress' local copy of jquery, load our own version from a CDN instead
-	wp_deregister_script('jquery');
-	// wp_enqueue_script(
-	// 	'jquery',
-	// 	"http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js",
-	// 	false, //dependencies
-	// 	null, //version number
-	// 	true //load in footer
-	// );
+	wp_enqueue_script( 'cct-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
 
-	// Load jQuery
-	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/build/js/jquery.min.js', array(), '1.4.1', true );
+	wp_enqueue_script("jquery");
 
-	// Font-awesome
-	wp_enqueue_style ( 'font-awesome-cdn' , 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', array(), '4.4.0');
-
-	// Stylesheet
-	wp_enqueue_style( 'goatsocial-starter-style', get_stylesheet_uri() );
-
-	// Link Focus
-	wp_enqueue_script( 'goatsocial-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
-
-	// Load scripts
-	wp_enqueue_script( 'scripts.min.js', get_template_directory_uri() . '/build/js/scripts.min.js', array( 'jquery' ), '1.9.1', true );
+	wp_enqueue_script( 'slick', get_template_directory_uri() . '/build/js/slick.min.js', array(), true );
+	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/build/js/scripts.min.js', array(), true );
+	wp_enqueue_script( 'sliders', get_template_directory_uri() . '/build/js/sliders.min.js', array(), true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'goatsocial_starter_scripts' );
+add_action( 'wp_enqueue_scripts', 'cct_starter_scripts' );
 
 /**
  * A Function specific to ACF for creating an Options Page

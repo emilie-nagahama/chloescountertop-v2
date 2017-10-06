@@ -5,15 +5,15 @@
 /* Links */
 
 a {
-	color: $color__link;
+	color: $color_pink;
 
 	&:visited {
-		color: $color__link-visited;
+		color: $color_blue;
 	}
 	&:hover,
 	&:focus,
 	&:active {
-		color: $color__link-hover;
+		color: $color_pink;
 	}
 	&:focus {
 		outline: thin dotted;
@@ -128,5 +128,247 @@ a {
 		float: right;
 		text-align: right;
 		width: 50%;
+	}
+}
+
+// Chloe's Navigation code
+
+/* Links */
+
+a {
+	color: $pink__link;
+
+	&:visited {
+		color: $pink__link-visited;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: $pink__link-hover;
+	}
+	&:focus {
+		outline: thin dotted;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
+
+/* Menus */
+
+.main-navigation {
+	display: block;
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+		display: none;
+
+		li {
+			&:hover ul,
+			&.focus ul {
+				right: 0px;
+		    display: block;
+		    top: 40px;
+		    width: 300px;
+
+				@include desktop {
+					position: absolute;
+				}
+
+				a {
+					text-shadow: none;
+				}
+			}
+		}
+
+		a {
+			color: $color_blue;
+			text-transform: uppercase;
+			font-family: $font__sans-serif;
+			font-size: 1.5em;
+			display: inline-block;
+			width: 100%;
+		}
+
+		:hover > a,
+		.focus > a {
+
+		}
+
+		a:hover,
+		a.focus {
+			color: $color_pink;
+		}
+
+
+		li:hover > ul,
+		li.focus > ul {
+		}
+	}
+
+	li {
+		font-family: $font__sans-serif;
+
+		&:hover,
+		&.focus {
+		}
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+
+	.current-menu-item {
+		position: relative;
+
+		&:after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			left: 0;
+			bottom: 0;
+			border-bottom: 2px solid $color_pink;
+		}
+
+		&:last-child::after {
+			bottom: 85%;
+		}
+
+		a {
+			color: $color_pink;
+		}
+
+		.sub-menu a {
+			color: $color_blue;
+		}
+	}
+}
+
+.menu-box {
+	border: 1px solid $color_blue;
+	padding: 0 2%;
+  width: 100px;
+	text-align: center;
+
+  &.menu-item a {
+    color: $color_blue;
+    font-size: 1.5em;
+  }
+
+	&:hover {
+		background-color: $color_blue;
+		cursor: pointer;
+
+		a {
+			color: $color_white !important;
+		}
+	}
+
+	.menu-item-has-children .sub-menu {
+
+		&.menu-item a {
+			color: $color_white;
+			font-size: 1.5em;
+
+			&:hover {
+				color: $color_white;
+			}
+		}
+	}
+}
+
+.home .site-header .menu-box {
+	border: 1px solid $color_white;
+	padding: 0 2%;
+  width: 100px;
+	text-align: center;
+
+	&.menu-item a {
+    color: $color_white;
+    font-size: 1.5em;
+  }
+
+	&:hover {
+		a {
+			color: $color_pink
+		}
+	}
+
+	.menu-item-has-children .sub-menu {
+		color: $color_blue;
+	}
+}
+
+.sub-menu {
+	background: $color_blue;
+	padding: 1em;
+	z-index: 100;
+
+	.menu-item {
+		position: relative;
+
+		&:hover,
+		&.focus {
+			color: $color_pink;
+			border-bottom: 2px solid $color_pink;
+		}
+
+		.sub-menu {
+			white-space: nowrap;
+			right: -10px;
+			position: relative;
+			z-index: 0;
+
+			li:after {
+				border: none;
+			}
+
+			&#menu-item-41 {
+				color: blue;
+			}
+		}
+	}
+}
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 $base__space-unit;
+		overflow: hidden;
+	}
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}
+
+// Blog Pagination
+.blog-pagination {
+	margin-bottom: 2em;
+	text-align: center;
+	font-size: 24px;
+
+	a.prev {
+		margin: 0 0.5em 0 0;
+	}
+
+	a.next {
+		margin: 0 0 0.5em 0;
+	}
+
+	a.page-numbers:not(.next) {
+		margin: 0 0.25em;
 	}
 }

@@ -9,19 +9,13 @@ $headings: 'gt-walsheim-pro';
 /* Font Styles */
 
 p, h1, h2, h3, h4 {
-  color: $goatsocial_black;
+  color: #000;
 }
 
 h1, h2, h3 {
   font-family: $headings;
   font-weight: 300;
   font-style: normal;
-}
-
-.banner:not(.white) {
-  p, h1, h2, h3, h4 {
-    color: $goatsocial_white;
-  }
 }
 
 p, html {
@@ -54,40 +48,34 @@ p, html {
   line-height: 120px;
 }
 
-.h1 {
-	@include h1;
-}
-
-// h2
-
-.medium-heading {
-	@include medium-font;
-}
-
-// h3
-
-.small-heading {
-	@include small-heading;
-}
-
-// h4
-
-.smaller-heading {
-	@include smaller-heading;
-}
-
-
-// h5
-
-.description {
-	@include description;
-}
-
-// pull quote
-
-.pull-quote {
-	@include pull-quote;
-}
+// .h1 {
+// 	@include h1;
+// }
+//
+// // h2
+// .medium-heading {
+// 	@include medium-font;
+// }
+//
+// // h3
+// .small-heading {
+// 	@include small-heading;
+// }
+//
+// // h4
+// .smaller-heading {
+// 	@include smaller-heading;
+// }
+//
+// // h5
+// .description {
+// 	@include description;
+// }
+//
+// // pull quote
+// .pull-quote {
+// 	@include pull-quote;
+// }
 
 // Global Font Style Classes
 
@@ -111,4 +99,411 @@ p, html {
 
 .p-title {
   font-size: 14px;
+}
+
+
+// Chloe's type file
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+body,
+button,
+input,
+select,
+textarea {
+	color: $color__paragraph;
+	font-family: $font__sans-serif;
+	@include font-size(1);
+	font-weight: 300;
+	line-height: $font__line-height-body;
+}
+
+/* Headings */
+
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	margin: 0px;
+	text-transform: none;
+	font-family: $font__main;
+}
+
+/* Copy */
+
+p {
+	margin-bottom: $base__space-unit;
+	font-family: $font__main;
+}
+
+
+
+.entry-content {
+
+	ul, ol {
+		margin: 1em 0;
+
+		li {
+			margin-bottom: $base__space-unit;
+			font-family: $font__main;
+		}
+	}
+
+	h2, h3 {
+		color: $color_blue;
+		font-family: $font__main;
+		font-weight: 300;
+		margin-bottom: 1em;
+	}
+
+	img {
+		margin-bottom: 2em;
+	}
+}
+
+.page-template-default {
+
+  .title {
+    font-style: normal;
+    font-weight: 300;
+  }
+
+	h1 {
+		font-size: 52px;
+		font-weight: 700;
+		font-style: italic;
+		color: $color_blue;
+	}
+
+	h2, h3, h4 {
+		color: $color_blue;
+	}
+}
+
+dfn, cite, em, i {
+	font-style: italic;
+}
+
+b, optgroup, strong {
+	font-family: $font__main;
+	font-weight: 700;
+}
+
+blockquote {
+	margin: 0 $base__space-unit;
+}
+
+address {
+	margin: 0 0 $base__space-unit;
+}
+
+pre {
+	font-family: $font__pre;
+	@include font-size(0.9375);
+	line-height: $font__line-height-pre;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code, kbd, tt, var {
+	font-family: $font__code;
+	@include font-size(0.9375);
+}
+
+abbr, acronym {
+	border-bottom: 1px dotted $color_blue;
+	cursor: help;
+}
+
+mark, ins {
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+// Links
+
+a,
+.a-title,
+.a-title:active,
+.a-title:visited {
+	text-decoration: none;
+	color: $color_blue;
+}
+
+a.a-title:hover {
+	opacity: 0.6;
+}
+
+// Prev and Next Blog Links
+
+.nav-links {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+
+	.nav-previous {
+
+			a:hover {
+				color: $color_pink;
+			}
+	}
+	.nav-next {
+
+	}
+}
+
+// H1 Titles - SEO in mind
+
+.title {
+	color: $color_blue;
+	font-family: $font__sans-serif;
+	font-size: 3em;
+	font-style: normal;
+	font-weight: 300;
+	letter-spacing: 1px;
+	line-height: 1.2em;
+	text-transform: uppercase;
+
+		 &.blue {
+			color: $color_blue;
+		}
+}
+
+// H2 tag line
+.h2-tag {
+	color: #fff;
+	font-family: $font__main;
+	font-size: 3.5em;
+	font-style: italic;
+	font-weight: 300;
+
+	@include desktop {
+		display: inline-block;
+		// width: 50%;
+		text-align: center;
+	}
+
+	&.blue {
+		color: $color_blue;
+	}
+
+	span {
+		font-weight: 700;
+	}
+}
+
+.ig-wrapper {
+	text-align: center;
+}
+
+// H2 Title with Yellow Background
+.yellow-title {
+	color: $color_blue;
+	background: url(../../assets/images/CCT-YellowSwatch.png) no-repeat center center;
+	background-size: cover;
+	font-family: $font__main;
+	font-size: 1.5em;
+	font-style: italic;
+	font-weight: 500;
+	line-height: 1.3em;
+	padding: 0.5em 0;
+	text-align: center;
+	margin: 0.5em 0 1em;
+
+	h2 {
+		line-height: 1.3em;
+	}
+
+		@include desktop {
+			padding: 1em 0;
+			background-size: contain;
+		}
+}
+
+// H3 Title with Blue Background
+
+.blue-title {
+	color: #fff;
+	background: url(../../assets/images/CCT-BlueSwatch.png) no-repeat center center;
+	background-size: cover;
+	font-family: $font__main;
+	font-size: 1.5em;
+	font-style: italic;
+	font-weight: 500;
+	line-height: 1.3em;
+	margin: 2em 0 1em;
+	padding: 0.5em 0;
+	text-align: center;
+
+		@include desktop {
+			margin: 4em 0 2em;
+			padding: 1em 0;
+		}
+
+		h2 {
+      font-size: 1.2em;
+			line-height: 1.3em;
+		}
+}
+
+
+// H3 Bold Playfair display
+.inline-accent {
+	color: $color_blue;
+	font-family: $font__main;
+	font-size: 1.5em;
+	font-weight: 500;
+	line-height: 1.6em;
+	text-align: center;
+
+	p {
+		color: $color_blue;
+		font-family: $font__main;
+		font-size: 1em;
+		font-weight: 500;
+		line-height: 1.6em;
+		text-align: center;
+	}
+}
+
+.sub-text {
+	color: $color_blue;
+	font-family: $font__main;
+	font-size: 1.5em;
+	font-style: italic;
+	font-weight: 300;
+	line-height: 1.6em;
+
+		&.green {
+			color: $color_blue;
+		}
+
+		&.white {
+			color: $color_white;
+		}
+}
+
+// H3 Secondary Section Titles
+.secondary-section-title {
+	color: $color_blue;
+	font-family: $font__sans-serif;
+	font-size: 1.5em;
+	font-weight: 500;
+	line-height: 1em;
+	text-transform: uppercase;
+
+		&.green {
+			color: $color_blue;
+		}
+}
+
+// Home Recent Post Categories
+.home-categories {
+	color: $color_blue;
+	font-size: 1.1em;
+	letter-spacing: 1px;
+	text-align: center;
+  text-transform: uppercase;
+}
+
+.title-recent {
+		color: $color_blue;
+	font-size: 1.4em;
+	font-weight: 300;
+	text-align: center;
+	text-transform: none;
+	line-height: 1.2em;
+
+		a, a:active, a:focus, a:hover, a:visited {
+			color: $color_blue;
+		}
+}
+
+// Episode Number
+.pod-num {
+	background: $color_blue;
+	color: #fff;
+	font-family: $font__sans-serif;
+	font-size: 0.8em;
+	letter-spacing: 0.08em;
+  padding: 0.3em .5em;
+  max-width: 100px;
+  text-align: center;
+	text-transform: uppercase;
+}
+
+// Button Listen Now
+.listen {
+	@include button;
+	display: inherit;
+	padding: 0.5em 0.8em;
+	margin: 1em auto;
+}
+
+// H4 Episode Number
+.h4-num {
+	color: $color_blue;
+	display: block;
+	font-family: $font__sans-serif;
+	font-size: 0.8em;
+	letter-spacing: 0.08em;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+// H4 Podcast Archive, Podcast title
+.h4-title {
+	color: $color_blue;
+	display: block;
+	font-family: $font__main;
+	font-size: 1.2em;
+	font-weight: 500;
+	letter-spacing: 0.08em;
+	text-align: center;
+
+	&.green {
+		color: $color_blue;
+	}
+}
+
+// Living True H3 Styles
+
+.lt-styles, .about-styles , .sw-styles{
+
+	font-weight: 300;
+	text-transform: none;
+
+	p {
+		margin: .5em 0.5em 0.5em 0;
+	}
+
+	h3 {
+		color: $color_blue;
+		font-family: $font__main;
+		font-size: 1.5em;
+		font-style: normal;
+		font-weight: 300;
+		line-height: 1.6em;
+    margin: 2em 0 1em;
+	}
+}
+
+// Books Styles
+
+.book-title {
+
+	.sub-text {
+		font-style: normal;
+	}
+}
+
+// Category Archive page
+
+.archive, .category {
+	.page-header {
+		margin: 0 0 4em;
+	}
 }

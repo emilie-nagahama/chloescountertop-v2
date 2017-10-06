@@ -30,6 +30,29 @@
   }
 }
 
+// Breakpoints
+/* 600px */
+
+@mixin tablet {
+  @media screen and (min-width: 600px ) {
+    @content;
+  }
+}
+
+@mixin tablet-mid {
+  @media screen and (min-width: 800px ) {
+    @content;
+  }
+}
+
+/* 1024px */
+@mixin desktop {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+
 // @mixin respond-to($breakpoint) {
 //   @if $breakpoint == "400" {
 //     @media (max-width: 400px) {
