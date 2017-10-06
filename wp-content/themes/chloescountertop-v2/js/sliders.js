@@ -1,5 +1,6 @@
 jQuery(function($){
-  $(document).ready(function() {
+
+  $(function() {
     $('.home-slider').slick({
       autoplay: true,
       autoplaySpeed: 2500,

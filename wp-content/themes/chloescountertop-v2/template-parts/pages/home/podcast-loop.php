@@ -21,7 +21,7 @@
         <div class="home-podcast-cover-image" style="background-image: url('<?php echo $thumb['0']; ?>')"></div>
 
         <h4 class="h4-title"><?php the_title(); ?></h4>
-        <h4 class="box-num h4-num">Episode <?php the_field( 'podcast_episode_number' ); ?></h4>
+        <h4 class="box-num h4-num"><?php _e('Episode ', 'creative_ritual'); ?><?php the_field( 'podcast_episode_number' ); ?></h4>
       </a>
   <?php endwhile; ?>
 </div>

@@ -1,6 +1,6 @@
 jQuery(function($) {
 
-  $(document).ready(function() {
+  $(function() {
 
     $('.opt-in-button').click(function(event){
       event.preventDefault();

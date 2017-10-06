@@ -52,7 +52,7 @@
 
 
 				<nav id="site-navigation" class="main-navigation" role="navigation">
-						<p class="menu-button">Menu</p>
+						<p class="menu-button"><?php _e('Menu', 'creative_ritual'); ?></p>
 						<?php wp_nav_menu( array( 'theme_location' => 'mobile', 'menu_id' => 'mobile-menu', 'container' => 'ul' ) ); ?>
 						<?php wp_nav_menu( array( 'theme_location' => 'desktop', 'menu_id' => 'desktop-menu', 'container' => 'ul' ) ); ?>
 

@@ -1,5 +1,5 @@
 <div class="underline-thin blue">
-  <h3 class="secondary-section-title">Blog: Recent Posts</h3>
+  <h3 class="secondary-section-title"><?php _e('Blog: Recent Posts', 'creative_ritual'); ?></h3>
 </div>
 
 <div class="post-recent-wrap">
@@ -27,4 +27,4 @@
 </div>
 
 
-<a class="button-link" href="<?php get_template_directory_uri()?>/blog">See More Blog Posts</a>
+<a class="button-link" href="<?php get_template_directory_uri()?>/blog"><?php _e('See More Blog Posts', 'creative_ritual'); ?></a>
